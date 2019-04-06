@@ -11,4 +11,4 @@ defmodule BowersSdk.Me do
   def validate_role(values = %{token: _token}, [host: host]) do
     @http_client.post(host, "/role/validate", values)
   end
-end 
+end
