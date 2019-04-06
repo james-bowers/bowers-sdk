@@ -4,4 +4,5 @@ defmodule BowersSdk do
   and create function calls for them
   at compile time
   """
+  @type opts :: [host: String.t()]
 end

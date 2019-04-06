@@ -1,9 +1,12 @@
 defmodule BowersSdk.Me.PersonTest do
   use ExUnit.Case
   alias BowersSdk.HTTPClientMock
-  alias BowersSdk.Me.Person
+  
+  import BowersSdk.Me
 
   use Support.TestHelper, :mox
+
+  @me_host "http://me.bowers.dev"
 
   @valid_response %HTTPoison.Response{
     body: ~s({}),
@@ -13,11 +16,11 @@ defmodule BowersSdk.Me.PersonTest do
 
   test "create an anonymous user" do
     HTTPClientMock
-    |> expect(:post, fn _host, "/person/sign-up", %{} ->
+    |> expect(:post, fn "http://me.bowers.dev", "/person/sign-up", %{} ->
       @valid_response
     end)
 
-    Person.create()
+    create_person(%{}, host: @me_host)
   end
 
   test "create an identifiable user" do
@@ -28,6 +31,6 @@ defmodule BowersSdk.Me.PersonTest do
       @valid_response
     end)
 
-    Person.create(%{email: "tester@bowers.dev", password: "pass"})
+    create_person(%{email: "tester@bowers.dev", password: "pass"}, host: @me_host)
   end
 end
