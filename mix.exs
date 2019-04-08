@@ -27,6 +27,7 @@ defmodule BowersSdk.MixProject do
     [
       {:httpoison, "~> 1.5"},
       {:jason, "~> 1.1"},
+      {:ecto_sql, "~> 3.0"},
       {:mox, "~> 0.5", only: :test}
     ]
   end
