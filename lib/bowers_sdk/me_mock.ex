@@ -7,4 +7,7 @@ defmodule BowersSdk.MeMock do
 
   @impl Me
   def validate_role(_values, _opts), do: {200, %{}}
+
+  @impl Me
+  def create_account(_values, _opts), do: {200, %{}}
 end

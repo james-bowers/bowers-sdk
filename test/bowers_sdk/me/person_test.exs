@@ -1,7 +1,7 @@
 defmodule BowersSdk.Me.PersonTest do
   use ExUnit.Case
   alias BowersSdk.HTTPClientMock
-  
+
   import BowersSdk.Me
 
   use Support.TestHelper, :mox

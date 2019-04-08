@@ -14,8 +14,11 @@ defmodule BowersSdk.Me.RoleTest do
       @valid_response
     end)
 
-    Me.validate_role(%{
-      token: "abc123"
-    }, host: @me_host)
+    Me.validate_role(
+      %{
+        token: "abc123"
+      },
+      host: @me_host
+    )
   end
 end
