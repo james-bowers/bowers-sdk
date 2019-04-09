@@ -13,4 +13,7 @@ defmodule BowersSdk.MeMock do
 
   @impl Me
   def list_roles(_values, _opts), do: {200, %{}}
+
+  @impl Me
+  def create_role(_values, _opts), do: {200, %{}}
 end
