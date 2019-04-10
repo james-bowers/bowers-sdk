@@ -26,9 +26,9 @@ defmodule BowersSdk.MeReturn do
       }
     }
 
-  def reply_to(:create_person, _opts), do: %{}
+  def reply_to(:create_person), do: %{}
 
-  def reply_to(:validate_role, _opts),
+  def reply_to(:validate_role),
     do: %{
       "description" => "Role validated",
       "content" => %{
@@ -55,7 +55,7 @@ defmodule BowersSdk.MeReturn do
       "description" => "Account linked to person"
     }
 
-  def reply_to(:list_roles, _opts),
+  def reply_to(:list_roles),
     do: %{
       "content" => %{
         "roles" => [
