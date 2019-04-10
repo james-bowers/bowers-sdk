@@ -4,7 +4,6 @@ defmodule BowersSdk.MeReturn do
   for use in "business" logic tests.
   """
   @fake_data [
-    person_id: "c6d771c9-debe-4276-bd32-d2ca2b2c394f",
     account_id: "d75a9cd2-acec-46be-81e7-84a786971d44",
     role_id: "f8c8a516-ad0a-4409-aca1-40c74b48d81a",
     person_id: "c6d771c9-debe-4276-bd32-d2ca2b2c394f"
